@@ -5,13 +5,13 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      userData: "no data provided!",
+      input: "no data provided!",
     };
   }
 
   handleInput = (event) => {
     this.setState({
-      userData: event.target.value,
+      input: event.target.value,
     });
   };
 
@@ -19,7 +19,7 @@ class App extends Component {
     return (
       <div>
         <input type="text" onChange={this.handleInput} />
-        <h1>{this.state.userData}</h1>
+        <h1>{this.state.input}</h1>
       </div>
     );
   }
